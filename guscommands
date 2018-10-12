@@ -1,0 +1,239 @@
+[svcdocker@ledjenmsdapp01 ~]$ history
+    1  20180309 15:41:01  sudo yum install docker
+    2  20180309 15:43:03  sudo docker --version
+    3  20180309 15:46:29  sudo yum remove docker
+    4  20180309 15:52:25  ip addr
+    5  20180327 14:46:41  ls
+    6  20180327 14:46:57  sudo yum install cntlm-0.92.3-1.x86_64.rpm
+    7  20180327 14:48:54  sudo vi /etc/cntlm.conf
+    8  20180327 14:52:40  sudo vi /etc/yum.conf
+    9  20180327 14:54:16  sudo mkdir -p /etc/systemd/system/docker.service.d
+   10  20180327 14:54:55  cd /etc/systemd/system/docker.service.d
+   11  20180327 14:55:12  sudo vi http-proxy.conf
+   12  20180327 15:00:00  ls
+   13  20180327 15:00:33  sudo cntlm –H -c /etc/cntlm.conf
+   14  20180327 15:00:58  sudo cntlm -v
+   15  20180327 15:02:26  sudo vi /etc/cntlm.conf
+   16  20180327 15:03:27  ip addr
+   17  20180327 15:04:46  sudo cnltm -H -c /etc/cnltm.conf
+   18  20180327 15:05:27  sudo cntlm -H -c /etc/cntlm.conf
+   19  20180327 15:06:19  vi /etc/cntlm.conf
+   20  20180327 15:06:32  sudo vi /etc/cntlm.conf
+   21  20180327 15:12:35  ip addr
+   22  20180327 15:12:42  clear
+   23  20180327 15:13:02  vi /etc/cntlm.conf
+   24  20180327 15:13:39  vi /etc/ctnlm.conf
+   25  20180327 15:14:00  vi /etc/cntlm.conf
+   26  20180327 15:14:10  sudo vi /etc/cntlm.conf
+   27  20180327 15:15:29  cntlm -h
+   28  20180327 15:17:26  sudo cntlm -c /etc/cntlm.conf
+   29  20180327 15:17:51  sudo yum list available
+   30  20180327 15:18:33  cd
+   31  20180327 15:18:35  ls
+   32  20180327 15:18:54  sudo yum install -y docker-ce-18.03.0.ce-1.el7.centos.x86_64.rpm
+   33  20180327 15:28:50  pwd
+   34  20180327 15:28:52  ls
+   35  20180327 15:29:18  sudo yum install ./pigz-2.3.4-1.el7.x86_64.rpm
+   36  20180327 15:30:41  sudo yum install -y docker-ce-18.03.0.ce-1.el7.centos.x86_64.rpm
+   37  20180327 15:41:26  cd /etc/pki/ca-trust/source/anchors
+   38  20180327 15:41:42  cp ~/SSL-Interception-2016.cer .
+   39  20180327 15:41:49  sudo cp ~/SSL-Interception-2016.cer .
+   40  20180327 15:42:16  sudo update-ca-trust
+   41  20180327 15:42:26  clear
+   42  20180327 15:42:44  cd
+   43  20180327 15:43:32  sudo yum install -y ./docker-ce-18.03.0.ce-1.el7.centos.x86_64.rpm
+   44  20180327 15:44:31  ls
+   45  20180327 15:45:36  netstat -an | grep 3126
+   46  20180327 15:45:45  ls
+   47  20180327 15:46:08  sudo yum install -y ./docker-ce-17.12.1.ce-1.el7.centos.x86_64.rpm
+   48  20180327 15:48:53  sudo vi /etc/yum.conf
+   49  20180327 15:50:33  sudo yum install -y ./docker-ce-17.12.1.ce-1.el7.centos.x86_64.rpm
+   50  20180327 16:18:55  sudo yum remove -y docker-common
+   51  20180327 16:21:08  sudo yum install -y ./docker-ce-18.03.0.ce-1.el7.centos.x86_64.rpm
+   52  20180327 16:22:58  sudo systemctl start docker
+   53  20180327 16:23:15  sudo systemctl enable docker
+   54  20180327 16:23:26  sudo docker version
+   55  20180327 16:57:54  cd /etc/pki/
+   56  20180327 16:57:55  ls
+   57  20180327 16:58:04  cd ca-trust/
+   58  20180327 16:58:05  ls
+   59  20180327 16:58:17  cd source/
+   60  20180327 16:58:18  ls
+   61  20180327 16:58:26  cd anchors/
+   62  20180327 16:58:28  ls
+   63  20180327 16:58:37  pwd
+   64  20180327 16:59:56  cd /etc/systemd/system/
+   65  20180327 16:59:58  ls
+   66  20180327 17:00:07  cd docker.service.d/
+   67  20180327 17:00:10  ls
+   68  20180327 17:00:15  pwd
+   69  20180327 17:01:16  cat http-proxy.conf
+   70  20180327 17:01:24  [Service]
+   71  20180327 17:02:14  cat /etc/yum.conf
+   72  20180327 17:03:23  sudo vi /etc/yum.conf
+   73  20180327 17:03:50  cat /etc/environment
+   74  20180327 17:05:17  sudo vi /etc/environment
+   75  20180327 17:06:56  cat /etc/yum.conf
+   76  20180327 17:45:14  clear
+   77  20180327 17:45:22  ip addr | grep inet
+   78  20180327 17:47:01  sudo docker swarm init --advertise-addr 10.32.12.97
+   79  20180327 17:49:05  sudo docker node ls
+   80  20180327 17:52:18  sudo docker service create   --name=viz   --publish=8080:8080/tcp   --constraint=node.role==manager   --mount=type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock   dockersamples/visualizer
+   81  20180327 18:06:29  cntlm
+   82  20180327 18:06:38  cntlm -v
+   83  20180327 18:06:58  sudo cntlm -v
+   84  20180327 18:07:30  ss -nat | grep 3126
+   85  20180327 18:07:53  sudo cntlm -h
+   86  20180327 18:09:29  ps -ef | grep cntlm
+   87  20180327 18:11:55  sudo vi /etc/cntlm.conf
+   88  20180327 18:13:17  ps -ef | grep cntlm
+   89  20180327 18:13:42  sudo kill -9 33898
+   90  20180327 18:13:47  ps -ef | grep cntlm
+   91  20180327 18:14:20  ip addr | grep inet
+   92  20180327 18:14:39  sudo docker node ls
+   93  20180328 10:39:29  sudo su
+   94  20180328 11:20:38  sudo -l
+   95  20180328 11:20:40  exit
+   96  20180328 10:57:10  cd /var/lib
+   97  20180328 10:57:11  ls
+   98  20180328 10:57:15  cd docker
+   99  20180328 10:57:23  ls -l
+  100  20180328 10:57:58  cd ..
+  101  20180328 10:58:00  ls -l
+  102  20180328 10:58:11  ls -l docker
+  103  20180328 10:58:17  ls -l
+  104  20180328 10:59:20  cat /etc/group
+  105  20180328 12:08:30  sudo su -
+  106  20180328 12:09:42  exit
+  107  20180328 11:32:19  sudo usermod -aG docker svcdocker
+  108  20180328 11:32:45  ls -l /etc/cntlm.conf
+  109  20180328 12:05:15  sudo docker node ls
+  110  20180328 12:24:20  ps -ef | grep 3126
+  111  20180328 12:25:00  sudo vi /etc/cntlm.conf
+  112  20180328 12:26:12  sudo reboot
+  113  20180328 12:28:46  clear
+  114  20180328 12:29:03  sudo pr -ef | grep 3126
+  115  20180328 12:29:24  sudo ps -ef | grep 3126
+  116  20180328 12:29:56  sudo cntlm -v
+  117  20180328 12:30:47  netstat -an grep 3126
+  118  20180328 12:31:04  netstat -an | grep 3126
+  119  20180328 12:31:34  sudo cntlm -v /etc/cntlm.conf
+  120  20180328 12:31:44  sudo cntlm -v
+  121  20180328 12:32:06  sudo vi /etc/cntlm.conf
+  122  20180328 12:32:40  cd /etc/systemd/system/docker.service.d/
+  123  20180328 12:32:40  ls
+  124  20180328 12:32:49  sudo vi http-proxy.conf
+  125  20180328 12:33:26  sudo cntlm -c /etc/cntlm.conf
+  126  20180328 12:33:42  netstat -an | grep 3140
+  127  20180328 12:33:59  sudo docker pull nginx
+  128  20180328 12:35:03  ~]$ sudo reboot
+   129  20180328 12:35:14  netstat -an | grep 3126
+  130  20180328 12:36:26  ps -ef | grep 3126
+  131  20180328 12:36:52  sudo kill -9 19212
+  132  20180328 12:37:59  sudo kill -9 `pgrep cntlm`
+  133  20180328 12:38:11  netstat -an | grep 3126
+  134  20180328 12:38:22  netstat -an | grep 3140
+  135  20180328 12:38:54  sudo cntlm -c /etc/cntlm.conf
+  136  20180328 12:39:00  netstat -an | grep 3140
+  137  20180328 12:39:23  sudo docker pull nginx
+  138  20180328 12:39:50  sudo cntlm -v
+  139  20180328 12:40:09  netstat -an grep 3140
+  140  20180328 12:40:16  netstat -an | grep 3140
+  141  20180328 12:40:41  sudo kill -9 `pgrep cntlm`
+  142  20180328 12:40:46  netstat -an | grep 3140
+  143  20180328 12:41:11  vi /etc/cntlm.conf
+  144  20180328 12:41:25  sudo vi /etc/cntlm.conf
+  145  20180328 12:42:03  sudo vi http-proxy.conf
+  146  20180328 12:50:10  ip addr | grep inet
+  147  20180328 12:51:00  sudo systemctl start cntlmd
+  148  20180328 12:51:30  netstat -an | grep 3126
+  149  20180328 12:52:15  sudo cntlm -c /etc/cntlm.conf
+  150  20180328 12:52:33  sudo docker pull nginx
+  151  20180328 12:57:01  netstat -an | grep 3126
+  152  20180328 14:38:44  export http_proxy=http://127.0.0.1:3126
+  153  20180328 14:39:06  export http_proxys=http://127.0.0.1:3126
+  154  20180328 14:39:25  ping www.cisco.com
+  155  20180328 14:39:43  open
+  156  20180328 14:42:50  telnet 52.86.185.75 443
+  157  20180328 14:43:35  telnet 52.86.185.75:443
+  158  20180329 11:02:12  sudo su -
+  159  20180329 10:41:20  docker pull nginx
+  160  20180329 10:41:57  docker pull apache
+  161  20180329 10:42:16  docker pull hello-world
+  162  20180329 10:42:37  docker images ls
+  163  20180329 10:42:53  docker images
+  164  20180329 12:03:41  ip addr | grep inet
+  165  20180329 12:04:38  docker network create -d overlay ovnet-jenkins
+  166  20180329 12:04:58  docker network ls
+  167  20180329 12:44:00  docker node ls
+  168  20180329 12:44:21  docker service ls
+  169  20180329 12:44:54  docker service update --replicas=10 myjenkins
+  170  20180330 09:58:32  sudo suu -
+  171  20180330 09:58:38  sudo su-
+  172  20180330 09:58:46  sudo su -
+  173  20180402 09:20:35  docker service ls
+  174  20180402 09:21:02  docker service scale -h
+  175  20180402 09:21:42  docker service scale myjenkis=1
+  176  20180402 09:21:56  docker service scale myjenkins=1
+  177  20180402 09:23:14  docker server update --replicas=1 myjenkins
+  178  20180402 09:24:21  docker service ls
+  179  20180402 15:18:56  sudo su -
+  180  20180409 13:30:24  docker container ls
+  181  20180409 13:30:49  docker service ls
+  182  20180410 12:24:33  sudo su -
+  183  20180416 10:02:06  Chomb@90
+  184  20180416 10:02:10  sudo su -
+  185  20180416 10:02:24  sudo docker ps
+  186  20180416 10:12:19  sudo su -
+  187  20180416 10:12:30  pwd
+  188  20180416 10:13:56  sudo su-
+  189  20180416 10:17:59  clear
+  190  20180416 10:18:15  sudo docker
+  191  20180416 10:18:46  sudo docker ps
+  192  20180416 10:22:52  docker search mysql
+  193  20180416 10:23:26  docker pull mysql
+  194  20180416 10:23:40  docker pull mysql latest
+  195  20180416 10:24:39  docker pull mysql
+  196  20180416 10:24:45  docker images
+  197  20180416 10:25:27  'docker exec -it 5195076672a7
+  198  20180416 10:31:19  docker version
+  199  20180416 10:31:33  docker ps
+  200  20180416 10:31:43  docker ps | ls -ltra
+  201  20180416 10:32:11  docker ps | -ls
+  202  20180416 10:32:14  docker ps
+  203  20180416 10:33:00  docker exec -ti 192 mysql
+  204  20180416 10:33:22  docker exec -ti 192 mysql -uroot -p
+  205  20180416 11:21:57  docket node ls
+  206  20180416 11:22:06  docker node ls
+  207  20180416 11:27:57  sudo su-
+  208  20180416 11:29:05  docker image
+  209  20180416 11:29:24  docker images
+  210  20180416 11:30:18  docker pull helloworld
+  211  20180416 11:35:31  docker pull hello-world
+  212  20180416 11:36:31  docker images
+  213  20180416 11:36:54  docker images -ltra
+  214  20180416 11:37:02  docker images | -ltra
+  215  20180416 11:37:06  clear
+  216  20180416 11:39:23  docker images | -ltra
+  217  20180416 11:39:28  docker images
+  218  20180416 10:57:34  docker node ls
+  219  20180416 10:57:45  [svcdocker@ledjenmsdapp01 ~]$ docker node ls
+  220  20180416 10:57:45  ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
+  221  20180416 10:57:45  urqueh7xthwi6tuptrethoxdj     ledjenbitdapp01     Ready               Active                                  18.03.0-ce
+  222  20180416 10:57:45  6apr5akkner4volcp6642ip4j *   ledjenmsdapp01      Ready               Active              Leader              18.03.0-ce
+  223  20180416 10:57:45  mp7jq44cky0uajnkcpgipb8q4     ledjensldapp01      Ready               Active                                  18.03.0-ce
+  224  20180416 10:57:45  [svcdocker@ledjenmsdapp01 ~]$
+  225  20180416 10:58:00  clear
+  226  20180416 10:58:09  urqueh7xthwi6tuptrethoxdj     ledjenbitdapp01     Ready               Active                                  18.03.0-ce
+  227  20180416 10:58:13  clear
+  228  20180416 10:58:19  docker node ls
+  229  20180417 11:11:11  docker info
+  230  20180417 11:17:15  docker service node
+  231  20180417 11:17:24  docker service ls
+  232  20180417 11:18:01  docker node ls
+  233  20180417 11:18:48  docker node --help
+  234  20180417 11:19:16  docker node ls
+  235  20180417 11:21:13  docker service ls
+  236  20180417 11:21:33  docker ps
+  237  20180417 11:24:25  history
+[
