@@ -1,0 +1,56 @@
+step 1: create sh file for example test.sh and paste below commands and save it as test.sh
+#!/bin/bash
+docker exec 8fa sh -c 'exec mysqldump --all-databases -uroot -pTestdata@2k18' > /home/svcdocker/msqlbackup/all-databases.$(date +"%Y%m%d_%H%M%S").sql
+if [ "$?" -eq 0 ]
+then
+    echo "`date` : Mysql dB Backup Successfully" >>log
+else
+    echo "`date` : Mysql DB backup  failed" >>log
+fi
+
+step 2: chmod  755 test.sh
+
+Step 3: crontab -e
+add below command in the shell point :-
+
+* * * * * /home/svcdocker/msqlbackup/test.sh
+
+
+step 4: cd /home/svcdocker/msqlbackup/
+
+step 5: ls -lr
+
+step 6: every minute new backup file will generated from mysql db. 
+
+for ex:- 
+-rwxr-xr-x 1 svcdocker svcdocker     300 May 22 07:13 test.sh
+-rw-rw-r-- 1 svcdocker svcdocker       0 May 21 15:14 mysqlbackupcron
+-rw-rw-r-- 1 svcdocker svcdocker 7260367 May 22 07:01 all-databases.sql
+-rw-rw-r-- 1 svcdocker svcdocker 7257494 May 22 06:57 all-databases_date+%d-%b-%Y.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 08:10 all-databases.20180522_081001.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 08:09 all-databases.20180522_080901.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 08:08 all-databases.20180522_080801.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 08:07 all-databases.20180522_080701.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 08:06 all-databases.20180522_080601.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 08:05 all-databases.20180522_080501.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 08:04 all-databases.20180522_080401.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 08:03 all-databases.20180522_080302.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 08:02 all-databases.20180522_080201.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 08:01 all-databases.20180522_080101.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 08:00 all-databases.20180522_080001.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 07:59 all-databases.20180522_075901.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 07:58 all-databases.20180522_075801.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 07:57 all-databases.20180522_075701.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 07:56 all-databases.20180522_075601.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 07:55 all-databases.20180522_075501.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 07:54 all-databases.20180522_075401.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 07:34 all-databases.20180522_073401.sql
+-rw-r--r-- 1 svcdocker svcdocker 7260382 May 22 07:33 all-databases.20180522_073301.sql
+-rw-rw-r-- 1 svcdocker svcdocker 7260367 May 22 07:04 all-databases.20180522_070415.sql
+
+
+How to remove cron job:
+
+step 7: crontab -r
+
+running job will be deleted.
