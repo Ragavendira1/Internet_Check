@@ -1,0 +1,110 @@
+Default Subject:-
+$PROJECT_NAME - Build # $BUILD_NUMBER - Execution Status {Total :${TEST_COUNTS,var="total"}; Passed: ${TEST_COUNTS,var="pass"}; Failed: ${TEST_COUNTS,var="fail"}, Skipped: ${TEST_COUNTS,var="skip"}  }
+Default Content:-
+
+<STYLE>
+BODY, TABLE, TD, TH, P {
+	font-family: Verdana, Helvetica, sans serif;
+	font-size: 11px;
+	color: black;
+}
+
+h1 {
+	color: black;
+}
+
+h2 {
+	color: black;
+}
+
+h3 {
+	color: black;
+}
+
+TD.bg1 {
+	color: white;
+	background-color: #595959;
+	font-size: 120%
+}
+
+TD.bg2 {
+	color: white;
+	background-color: #4040FF;
+	font-size: 110%
+}
+
+TD.bg3 {
+	color: white;
+	background-color: #8080FF;
+}
+
+TD.test_passed {
+	color: #ccc;
+}
+
+TD.test_failed {
+	color: red;
+}
+
+TD.console {
+	font-family: Courier New, Lucida Console;
+}
+</STYLE>
+<BODY>
+	<TABLE>
+
+		<TR>
+
+			<TD valign="center" colspan="2"><B style="font-size: 200%;"><FONT
+					FACE="Geneva, Arial" SIZE=4>$JOB_NAME Results</FONT></TD>
+		</TR>
+		<TR>
+			<TD><FONT FACE="Geneva, Arial" SIZE=3>Console Logs</FONT></TD>
+			<TD><A href="$JENKINS_URL/job/$JOB_NAME/$BUILD_NUMBER/console"><FONT
+					FACE="Geneva, Arial" SIZE=3>$JOB_NAME Console Logs</FONT></A></TD>
+		</TR>
+		<TR>
+			<TD><FONT FACE="Geneva, Arial" SIZE=3>Detailed Execution
+					Report</FONT></TD>
+			<TD><A
+				href="$JENKINS_URL/job/$JOB_NAME/$BUILD_NUMBER/TCS-WEB-Regression-QA (CRM)/"><FONT
+					FACE="Geneva, Arial" SIZE=3>$JOB_NAME Report</FONT></A></TD>
+		</TR>
+
+		<TR>
+			<TD><FONT FACE="Geneva, Arial" SIZE=3>Result Analysis</FONT></TD>
+			<TD><A
+				href="$JENKINS_URL/job/$JOB_NAME/test_results_analyzer/"><FONT
+					FACE="Geneva, Arial" SIZE=3>$JOB_NAME Result Analysis</FONT></A></TD>
+		</TR>
+		<TR>
+			<TD><FONT FACE="Geneva, Arial" SIZE=3>BUILD
+					STATUS:</FONT></TD>
+			<TD><FONT FACE="Geneva, Arial" SIZE=3>SUCCESS!</FONT></TD>
+		</TR>
+	</TABLE>
+	<BR />
+
+	<!-- JUnit TEMPLATE -->
+	<!-- ARTIFACTS -->
+	<TABLE width="20%">
+		<TR>
+			<TD class="bg1"><B><FONT COLOR=White FACE="Geneva, Arial"
+					SIZE=4>Execution Result Summary</FONT></B></TD>
+		</TR>
+	</TABLE>
+	<BR />
+          ${FILE, path="emailreport.html"}   <br/<br>
+	<BR />
+	<TABLE BORDER=0 CELLSPACING=2 CELLPADDING=2 Width="100%">
+		<TR>
+			<TD width="10%" colspan="3"><FONT FACE="Geneva, Arial" SIZE=2>
+					<b>Note: This is an automated email</b>
+			</font></td>
+
+		</TR>
+	</TABLE>
+</BODY>
+
+Attachment: 
+*.png,tcs-web-automation/resultFile/excelReport/*.xlsx
