@@ -236,4 +236,15 @@
   235  20180417 11:21:13  docker service ls
   236  20180417 11:21:33  docker ps
   237  20180417 11:24:25  history
-[
+NTLM commands:-
+
+netstat -an |grep 3126
+pkill -9 cntlm
+sudo cntlm -c /etc/cntlm.conf
+
+service --status-all
+service --status-all |more
+service --status-all|grep ntpd
+service --status-all |less
+
+sudo firewall-cmd --zone=public --permanent --list-ports
